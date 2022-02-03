@@ -1,19 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Weather App</title>
     <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
+    <!-- header -->
+    <div class="jumbotron container-fluid text-center p-2" style="background-color: #0d6efd">
+        <h1> <strong>Weather Dashboard</strong></h1>
+        <!-- search bar -->
+    </div>
+
+    <div class="container pt-1 mt-5">
+        <div class="row">
+            <div class="col-sm-4 bg-light">
+                <h4 class="search">ENTER CITY:</h4>
+                <div class="input-group mb-3">
+                    <input type="text" class="form" id="search-city" aria-label="City Search"
+                        aria-describedby="search-button">
+                    <div class="input-group-append mb-1">
+                        <button class="btn btn-primary text-light" id="search-button"><i class="fa fa-search"></i>SEARCH</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     
 
+        <ul class="list"></ul>
+
+        <div class="container">
+            <div class="row ml-5 border border-dark rounded">
+                <div class="col-sm-5" id="live-weather">
+                    <h3 class="city mb-1 mt-2 bold" id="current-city"></h3>
+                    <p>Temerature: <span class="live" id="temperature"></span></p>
+                    <p>Humidity: <span class="live" id="humidity"></span></p>
+                    <p>Wind Speed: <span class="live" id="wind-speed"></span></p>
+                    <p>UV Index: <span class="uv bg-warning rounded py-2 px-3 text-black" id="uv-index"></span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" id="future">
+            <h3>Forecast:</h3>
+            <div class="row text-black">
+                <div class="col-sm-1 bg-primary forecast text-white ml-2 mb-3 p-1 mt-2 rounded">
+                    <p id="Date0"></p>
+                    <p id="Img0"></p>
+                    <p>Temperature: <span id="temp0"></span></p>
+                    <p>Humidity: <span id="humidity0"></span></p>
+                    <p>Wind Speed: <span id="wind-speed0"></span></p>
+                    <p>UV Index: <span class="uv bg-warning rounded py-2 px-3 text-black" id="uv-index0"></span></p>
+
+                </div>
+
+                <div class="col-sm-1"></div>
+                <div class="col-sm-1 bg-primary forecast text-white ml-2 mb-3 p-1 mt-2 rounded">
+                    <p id="Date1"></p>
+                    <p id="Img1"></p>
+                    <p>Temperature: <span id="temp1"></span></p>
+                    <p>Humidity: <span id="humidity1"></span></p>
+                    <p>Wind Speed: <span id="wind-speed1"></span></p>
+                    <p>UV Index: <span class="uv bg-warning rounded py-2 px-3 text-black" id="uv-index1"></span></p>
+                </div>
+
+                <div class="col-sm-1"></div>
+                <div class="col-sm-1 bg-primary forecast text-white ml-2 mb-3 p-1 mt-2 rounded">
+                    <p id="Date2"></p>
+                    <p id="Img2"></p>
+                    <p>Temperature: <span id="temp2"></span></p>
+                    <p>Humidity: <span id="humidity2"></span></p>
+                    <p>Wind Speed: <span id="wind-speed2"></span></p>
+                    <p>UV Index: <span class="uv bg-warning rounded py-2 px-3 text-black" id="uv-index2"></span></p>
+                </div>
+
+                <div class="col-sm-1"></div>
+                <div class="col-sm-1 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+                    <p id="Date3"></p>
+                    <p id="Img3"></p>
+                    <p>Temperature: <span id="temp3"></span></p>
+                    <p>Humidity: <span id="humidity3"></span></p>
+                    <p>Wind Speed: <span id="wind-speed3"></span></p>
+                    <p>UV Index: <span class="uv bg-warning rounded py-2 px-3 text-black" id="uv-index3"></span></p>
+                </div>
+
+                <!-- <div class="col-sm-1"></div> -->
+                <div class="col-sm-1"></div>
+                <div class="col-sm-1 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+                    <p id="Date4"></p>
+                    <p id="Img4"></p>
+                    <p>Temperature: <span id="temp4"></span></p>
+                    <p>Humidity: <span id="humidity4"></span></p>
+                    <p>Wind Speed: <span id="wind-speed4"></span></p>
+                    <p>UV Index: <span class="uv bg-warning rounded py-2 px-3 text-black" id="uv-index4"></span></p>
+                </div>
+
+            </div>
+
+        </div>
 
 
 
+
+    </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>
