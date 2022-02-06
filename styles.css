@@ -2,8 +2,35 @@
     display: none;
 } */
 
-.container {
+/* .container {
     flex-direction: row;
     align-items: center;
     margin-left: 0px;
+} */
+
+.forecast {
+    width: 15%;
+}
+
+.row {
+    gap: 60px;
+}
+.listItem:hover {
+    background-color: rgb(0, 255, 13);
+    cursor: pointer;
+}
+
+.container {
+    position: relative;
+}
+
+.iconContainer{
+    /* width: 50%; */
+    position: absolute;
+    top: 20%;
+    right: 50%;
+}
+
+.iconContainer img{
+width: 150px;
 }
