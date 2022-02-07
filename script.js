@@ -72,6 +72,7 @@ function oneCall(lat, lon) {
             windSpeed.textContent = data.current.wind_speed + "MPH"
             uvIndex.textContent = data.current.uvi
             icon.src = `http://openweathermap.org/img/w/${data.current.weather[0].icon}.png`
+            uvColor(data.current.uvi)
             // Day 1 forecast 
 
             temp1.textContent = data.daily[0].temp.day + "F"
@@ -117,7 +118,28 @@ function oneCall(lat, lon) {
 
 }
 
+function uvColor(uvi) {
+    console.log(uvi)
+    if (uvi < 3) {
+        uvIndex.style.backgroundColor = "green"
+    }
+    else if (uvi < 6) {
+        uvIndex.style.backgroundColor = "yellow"
 
+    }
+
+    else if (uvi < 8) {
+        uvIndex.style.backgroundColor = "orange"
+    }
+
+    else if (uvi < 11) {
+        uvIndex.style.backgroundColor = "red"
+    }
+
+    else {
+        uvIndex.style.backgroundColor = "purple"
+    }
+}
 
 
 
@@ -135,9 +157,9 @@ searchBtn.addEventListener("click", function (event) {
 })
 
 
-pastSearch.addEventListener("click", function(event){
+pastSearch.addEventListener("click", function (event) {
     console.log(event)
-    if (event.target.textContent !== undefined){
+    if (event.target.textContent !== undefined) {
         currentWeather(event.target.textContent)
     }
 })
